@@ -1,79 +1,38 @@
 /* colors */
-$darkBlue: #3f53db;
+$darkBlue: #217093;
 $medBlue: #4eb8dd;
 $lightBlue: #ddf1fa;
 $inputBG: #f3fafd;
 
-html, body {
-  min-height: 100vh; // Utilisez viewport height (vh) pour garantir que le contenu est centré même si le contenu est plus petit que l'écran
-  margin: 0;
-  padding: 0;
-}
-
+html {width: 100%; height: 100%;}
 body {
-  background-color: #eff3f4;
-  display: flex;
-  justify-content: center; // Centre horizontalement dans le conteneur flex
-  align-items: center; // Centre verticalement dans le conteneur flex
-  font-size: 16px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
+	background-color: #eff3f4; position: relative; width: 100%; height: 100%;
+	font-size: 16px; font-family: 'Source Sans Pro', sans-serif; font-weight: 400;
+	-webkit-font-smoothing: antialiased;
 }
-
 form {
-  background-color: #FFF;
-  padding: 2.25em;
-  box-sizing: border-box;
-  border: solid 1px #DDD;
-  border-radius: .5em;
-  font-family: 'Source Sans Pro', sans-serif;
-  width: 100%;
-  max-width: 400px; // Largeur maximale du formulaire
-  margin: auto; // Cette ligne est ajoutée pour centrer verticalement le formulaire si le flexbox n'est pas supporté
-
-  .svgContainer {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 1em;
-    border-radius: 50%;
-    pointer-events: none;
-    
-    div {
-      position: relative;
-      width: 100%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 50%;
-      padding-bottom: 100%;
-    }
-    
-    .mySVG {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-    
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      width: inherit;
-      height: inherit;
-      box-sizing: border-box;
-      border: solid 2.5px $darkBlue;
-      border-radius: 50%;
-    }
-  }
-
-}
-
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+	display: block; width: 100%; max-width: 400px; background-color: #FFF;
+	margin: 0; padding: 2.25em; box-sizing: border-box; border: solid 1px #DDD; border-radius: .5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	.svgContainer {
+		position: relative; width: 200px; height: 200px; margin: 0 auto 1em;
+		border-radius: 50%;
+		pointer-events: none;
+		div {
+			position: relative; width: 100%; height: 0; overflow: hidden; border-radius: 50%;
+			padding-bottom: 100%;
+		}
+		.mySVG {
+			position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+			pointer-events: none;
+		}
+		&:after {
+			content: ""; position: absolute; top: 0; left: 0; z-index: 10; 
+			width: inherit; height: inherit; box-sizing: border-box;
+			border: solid 2.5px $darkBlue; border-radius: 50%;
+		}
+	}
 	.inputGroup {
 		margin: 0 0 2em; padding: 0; position: relative;
 		&:last-of-type {
@@ -165,3 +124,4 @@ form {
 			}
 		}
 	}
+}
