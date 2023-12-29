@@ -376,7 +376,7 @@ function initLoginForm() {
     
     // clear the console
     console.clear();
-	console.log(titledoc.innerText);
+	//console.log(titledoc.innerText);
 }
 
 
