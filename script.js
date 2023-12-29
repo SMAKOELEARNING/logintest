@@ -41,11 +41,11 @@ function calculateFaceMove(e) {
 		mouthAngle = getAngle(mouthCoords.x, mouthCoords.y, emailCoords.x + emailScrollMax, emailCoords.y + 25);
 	}
 	
-	eyeLX = Math.cos(eyeLAngle) * 10;
+	eyeLX = Math.cos(eyeLAngle) * 20;
 	eyeLY = Math.sin(eyeLAngle) * 10;
 	eyeRX = Math.cos(eyeRAngle) * 20;
 	eyeRY = Math.sin(eyeRAngle) * 10;
-	noseX = Math.cos(noseAngle) * 13;
+	noseX = Math.cos(noseAngle) * 23;
 	noseY = Math.sin(noseAngle) * 10;
 	mouthX = Math.cos(mouthAngle) * 23;
 	mouthY = Math.sin(mouthAngle) * 10;
